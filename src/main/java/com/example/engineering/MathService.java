@@ -1,6 +1,6 @@
 package com.example.engineering;
 
-public class App {
+public class MathService {
     public static void main(String[] args) {
 
         MathService math = new MathService();
@@ -14,3 +14,4 @@ public class App {
         System.out.println("Kinetic Energy( mass=2kg, velocity=5m/s ) = " + physics.kineticEnergy(2,5) + "J");
     }
 }
+
