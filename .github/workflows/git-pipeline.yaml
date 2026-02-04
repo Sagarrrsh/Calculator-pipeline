@@ -1,0 +1,30 @@
+image: maven:3.9.6-eclipse-temurin-17
+
+stages:
+  - build
+  - test
+  - package
+
+cache:
+  key: maven-cache
+  paths:
+    - .m2/repository
+
+build:
+  stage: build
+  script:
+    - mvn clean compile
+
+test:
+  stage: test
+  script:
+    - mvn test
+
+package:
+  stage: package
+  script:
+    - mvn package
+  artifacts:
+    when: always
+    paths:
+      - target/*.jar
