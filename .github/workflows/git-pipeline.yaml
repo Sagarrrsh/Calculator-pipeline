@@ -29,6 +29,7 @@ jobs:
         run: |
           mvn clean verify sonar:sonar \
             -Dsonar.projectKey=Calculator-pipeline \
+            -Dsonar.organization=sagarrrsh \
             -Dsonar.host.url=https://sonarcloud.io
 
       # 4. Upload JAR artifact (only if Sonar passes)
