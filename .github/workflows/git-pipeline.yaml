@@ -28,7 +28,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: |
           mvn clean verify sonar:sonar \
-            -Dsonar.projectKey=calculator-pipeline \
+            -Dsonar.projectKey=sagarrrsh_calculator-pipeline \
             -Dsonar.organization=sagarrrsh \
             -Dsonar.branch.name=main \
             -Dsonar.host.url=https://sonarcloud.io
